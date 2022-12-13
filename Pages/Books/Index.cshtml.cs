@@ -25,7 +25,7 @@ namespace Munteanu_Elena_Lab222.Pages.Books
         {
             if (_context.Book != null)
             {
-                Book = await _context.Book.Include(b => b.Publisher).ToListAsync();
+                 Book = await _context.Book.Include(b => b.Author).Include(b => b.Publisher).ToListAsync();
             }
         }
     }
